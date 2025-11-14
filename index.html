@@ -11,21 +11,16 @@
 
   <h2>Campo vectorial en AR (mover y escalar)</h2>
 
-  <model-viewer src="campo_vectores.glb"
-    ar
-    ar-modes="webxr scene-viewer quick-look"
+ <model-viewer src="campo_vectores.glb"
+  ar
+  ar-modes="webxr"
+  ar-placement="touch"
+  camera-controls
+  environment-image="neutral"
+  style="width:100%; height:600px;">
+</model-viewer>
 
-    ar-placement="touch"        <!-- Colocar con toque -->
-    ar-tracking="placement"     <!-- Permitir mover el objeto -->
-
-    camera-controls
-    disable-tap                 <!-- Evita rotación accidental -->
-    enable-scale                 <!-- ⭐ Activar pinch-to-scale -->
-    interaction-prompt="none"   <!-- Oculta el mensaje flotante -->
-    
-    environment-image="neutral"
-    style="width:100%; height:600px;">
-  </model-viewer>
 
 </body>
 </html>
+
