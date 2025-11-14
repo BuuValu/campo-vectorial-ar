@@ -2,20 +2,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Campo vectorial en AR</title>
+  <title>AR Interactivo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body style="margin:0; background:#f0f0f0; text-align:center;">
 
-  <h2>Campo vectorial en 3D y AR</h2>
+  <h2>Campo vectorial en AR (mover y escalar)</h2>
 
   <model-viewer src="campo_vectores.glb"
     ar
     ar-modes="webxr scene-viewer quick-look"
-    ar-placement="touch"      <!-- ⭐ Aquí se activa el toque -->
+
+    ar-placement="touch"        <!-- Colocar con toque -->
+    ar-tracking="placement"     <!-- Permitir mover el objeto -->
+
     camera-controls
+    disable-tap                 <!-- Evita rotación accidental -->
+    enable-scale                 <!-- ⭐ Activar pinch-to-scale -->
+    interaction-prompt="none"   <!-- Oculta el mensaje flotante -->
+    
     environment-image="neutral"
     style="width:100%; height:600px;">
   </model-viewer>
